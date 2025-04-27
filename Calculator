@@ -1,0 +1,18 @@
+num1 = float(input("Enter first number: "))
+op = input("Enter operator: ")
+num2 = float(input("Enter second number: "))
+try:
+    if op == "+":
+     print(num1 + num2)
+    elif op == "-":
+        print(num1 - num2)
+    elif op == "/":
+        print(num1 / num2)
+    elif op == "*":
+        print(num1 * num2)
+    elif op == "^":
+        print(num1 ** num2)
+except ValueError:
+    print("Invalid input")
+except ZeroDivisionError:
+    print("You can't divide by zero")
