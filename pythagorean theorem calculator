@@ -1,0 +1,27 @@
+import math
+num1 = input("Enter first leg: ")
+num2 = input("Enter second leg: ")
+num3 = input("Enter Hypotenuse: ")
+try:
+  if  num2=="x":
+    result = (float(num1) * float(num1))
+    result2 = (float(num3) * float(num3))
+    result3 = result2 - result
+    result4 = math.sqrt(result3)
+    print("leg", result4)
+
+  if num1=="x":
+    result = (float(num2) * float(num2))
+    result2 = (float(num3) * float(num3))
+    result3 = result2 - result
+    result4 = math.sqrt(result3)
+    print("leg", result4)
+
+  if num3 == "x":  
+    result = (float(num1) * float(num1))
+    result2 = (float(num2) * float(num2))
+    result3 = result + result2
+    result4 = math.sqrt(result3)
+    print("Hypotenuse", result4)
+except ValueError:
+  print("legs bigger than hypotenuse")
