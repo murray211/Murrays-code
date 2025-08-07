@@ -1,18 +1,17 @@
-import random 
+import random
 random_number = random.randint(1, 100)
 guess_left = 0
 guess_limt = 10
 guess_num1 = ""
 
-print(random_number)
 while guess_left < 10 and guess_num1 != random_number:
   guess_num1 = input("Guess a number between 1 and 100: ")
   guess_left += 1
-  if float(guess_num1) < random_number:
+  if int(guess_num1) < random_number:
     print("The number is higher than your guess.")
-  if float(guess_num1) > random_number:
+  if int(guess_num1) > random_number:
     print("The number is lower than your guess.")
-  if guess_num1 == random_number:
+  if int(guess_num1) == random_number:
     print("Congratulations! You guessed the number in", guess_left, "guesses.")
 
 print("Game Over. Answer is", random_number,)
